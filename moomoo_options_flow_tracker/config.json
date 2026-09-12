@@ -1,0 +1,16 @@
+{
+  "tickers": [
+    "AAPL",
+    "INTC",
+    "NVDA",
+    "TSLA"
+  ],
+  "spot_range_dollars": 10,
+  "strike_step": 5,
+  "weekly_expirations": 2,
+  "include_quarterly": true,
+  "database": "options_flow.db",
+  "timezone": "America/New_York",
+  "auto_export_eod": true,
+  "backup_on_friday_eod": true
+}
