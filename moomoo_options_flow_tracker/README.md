@@ -1,15 +1,5 @@
-# Options Flow Tracker v2
+# Options Flow Tracker
 
-## What changed in v2
-
-- Add/remove tracked stocks directly from the Dashboard.
-- Select any subset of tracked stocks and click **Run Selected Now**.
-- Enter an untracked ticker and click **Run Once**.
-- Historical Data page with filters for ticker, date, snapshot type, option type and expiration.
-- Export selected date to Excel from the Dashboard.
-- Automatic EOD Excel export.
-- Automatic Friday EOD database backup.
-- Scheduled 08:00 ET and 16:20 ET collections remain supported.
 
 ## Tracking rule
 
@@ -23,21 +13,6 @@ For every selected stock:
 - Store volume, open interest, IV, option close and spot
 - Calculate ΔOI from the prior stored observation of the same contract
 
-## Storage
-
-The main database is:
-
-`options_flow.db`
-
-It is never replaced during normal collection. New snapshots are appended.
-
-EOD exports go to:
-
-`exports/YYYY-MM-DD_options_flow.xlsx`
-
-Friday EOD backups go to:
-
-`backups/options_flow_YYYY-MM-DD_HHMM.db`
 
 ## First-time setup
 
@@ -85,6 +60,4 @@ Creates:
 - Mon–Fri 08:00 ET PREMARKET
 - Mon–Fri 16:20 ET EOD
 
-## Important
 
-Your PC must be awake and connected to the internet for Windows Task Scheduler to run the collection. For true unattended collection while the PC is off, the collector would need to run on an always-on machine or cloud service.
